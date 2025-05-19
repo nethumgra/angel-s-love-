@@ -5259,7 +5259,7 @@ When you shop at Angel's love ,you receive a smooth and wonderful experience tha
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900 mb-1">Email Us</h4>
-                    <p class="text-gray-600">info@partywear.com</p>
+                    <p class="text-gray-600">info@angelslove.lk/p>
                   </div>
                 </div>
               </div>
@@ -5388,27 +5388,63 @@ When you shop at Angel's love ,you receive a smooth and wonderful experience tha
         </div>
         
         <div>
-          <h3 class="text-lg font-bold mb-6">Information</h3>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns & Refunds</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
-          </ul>
-        </div>
+  <h3 class="text-lg font-bold mb-6">Information</h3>
+  <ul class="space-y-3">
+
+    <li>
+      <a  onclick="toggleInfo('shipping')" class="text-gray-400 hover:text-white transition-colors">
+        Delivery 
+      </a>
+      <div id="desc-shipping" class="hidden text-gray-300 mt-2 text-sm">
+       Delivery will be made to the address provided at the time of ordering. No changes will be accepted once the order has been accepted
+
       </div>
+    </li>
+
+    <li>
+      <a  onclick="toggleInfo('returns')" class="text-gray-400 hover:text-white transition-colors">
+        Shipping
+      </a>
+      <div id="desc-returns" class="hidden text-gray-300 mt-2 text-sm">
+       Shipping of products will be done in keeping with the delivery timelines provided for each product. These times may vary due to conditions that may be out of our control
+      </div>
+    </li>
+
+    <li>
+      <a  onclick="toggleInfo('privacy')" class="text-gray-400 hover:text-white transition-colors">
+        For returns
+      </a>
+      <div id="desc-privacy" class="hidden text-gray-300 mt-2 text-sm">
+        For returns policies, please contact us for more details
+      </div>
+    </li>
+
+    
+
+  </ul>
+</div>
+
+<script>
+  function toggleInfo(section) {
+    const sections = ['shipping', 'returns', 'privacy', 'terms', 'faqs'];
+    sections.forEach(s => {
+      const el = document.getElementById('desc-' + s);
+      if (s === section) {
+        el.classList.toggle('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+</script>
+
       
       <div class="border-t border-gray-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-400 text-sm mb-4 md:mb-0">
             &copy; 2025 Angelslove.lk All rights reserved.
           </p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms</a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy</a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cookies</a>
-          </div>
+          
         </div>
       </div>
     </div>
